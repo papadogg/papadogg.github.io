@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map';
 export class WeatherService {
     
     apiKey = '067dab9e5ee2f07b';
-    conditionsUrl = 'http://api.wunderground.com/api/'+this.apiKey +'/conditions/q';
-    searchUrl = 'http://autocomplete.wunderground.com/aq?query=';
-    tendaysUrl = 'http://api.wunderground.com/api/'+this.apiKey +'/forecast10day/q';
+    conditionsUrl = 'https://api.wunderground.com/api/'+this.apiKey +'/conditions/q';
+    searchUrl = 'https://autocomplete.wunderground.com/aq?query=';
+    tendaysUrl = 'https://api.wunderground.com/api/'+this.apiKey +'/forecast10day/q';
 
     constructor(private jsonp: Jsonp) {
        
