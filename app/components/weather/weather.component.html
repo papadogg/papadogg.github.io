@@ -1,0 +1,28 @@
+<form>
+    <div class="form-group">
+        <input type="text" 
+        name="searchStr" 
+        [(ngModel)]="searchStr" 
+        (keyup)="getQuery()" 
+        class="form-control" 
+        placeholder="Enter city...">
+    </div>
+</form>
+
+<div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let result of results">
+            <a (click)="chooseCity(result)">{{result.name}}</a>
+        </li>
+    </ul>
+</div>
+<br/>
+<div *ngIf="weather">
+<h3>{{weather.display_location.full}}</h3>
+<div class="icon"><img src="{{weather.icon_url}}"></div>
+<h3>{{weather.weather}}</h3>
+<h3>{{weather.temp_c}} &deg;C</h3>
+</div>
+
+
+

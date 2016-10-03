@@ -1,0 +1,24 @@
+<h3>Set default city</h3>
+<form>
+    <div class="form-group">
+        <input type="text" 
+        name="searchStr" 
+        [(ngModel)]="searchStr" 
+        (keyup)="getQuery()" 
+        class="form-control" 
+        placeholder="Default city">
+    </div>
+    <h3>Current: {{defaultCity}}</h3>
+
+
+</form>
+
+<div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let result of results">
+            <a (click)="setDefaultCity(result)">{{result.name}}</a>
+        </li>
+    </ul>
+</div>
+<button class="btn btn-success btn-block" 
+[disabled] = "searchStr !== defaultCity" routerLink="/">Save Changes</button>
