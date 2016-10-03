@@ -15,9 +15,9 @@ var WeatherService = (function () {
     function WeatherService(jsonp) {
         this.jsonp = jsonp;
         this.apiKey = '067dab9e5ee2f07b';
-        this.conditionsUrl = 'http://api.wunderground.com/api/' + this.apiKey + '/conditions/q';
-        this.searchUrl = 'http://autocomplete.wunderground.com/aq?query=';
-        this.tendaysUrl = 'http://api.wunderground.com/api/' + this.apiKey + '/forecast10day/q';
+        this.conditionsUrl = 'https://api.wunderground.com/api/' + this.apiKey + '/conditions/q';
+        this.searchUrl = 'https://autocomplete.wunderground.com/aq?query=';
+        this.tendaysUrl = 'https://api.wunderground.com/api/' + this.apiKey + '/forecast10day/q';
     }
     WeatherService.prototype.getWeather = function (zmw) {
         var params = new http_1.URLSearchParams();
