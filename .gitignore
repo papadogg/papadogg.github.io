@@ -1,9 +1,9 @@
 .idea
 typings/**
-node_modules/*
+node_modules
 !node_modules/@angular/
-node_modules/*
-!node_modules/systemjs/
+
+
 jspm_packages
 link-checker-results.txt
 **/*npm-debug.log.*
