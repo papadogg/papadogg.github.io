@@ -44,11 +44,7 @@ export class WeatherComponent implements OnInit {
         this.searchStr ='';
         
         
-        this.weatherService.getTenDaysWeather(city.zmw)
-        .subscribe(weather => {
-           this.tendaysresult = weather.forecast.simpleforecast.forecastday;
-           console.log(this.tendaysresult);
-        })
+       
     }
 
     getDefaultCity() {
