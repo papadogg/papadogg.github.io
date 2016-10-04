@@ -17,11 +17,21 @@
     </ul>
 </div>
 <br/>
-<div *ngIf="weather" class="row">
-<h3>The weather in {{weather.display_location.full}}</h3>
-<div class="icon"><img src="{{weather.icon_url}}"></div>
-<h3>{{weather.weather}}</h3>
-<h3>{{weather.temp_c}} &deg;C</h3>
+<div *ngIf="weather">
+    <div class="col-md-6 col-md-offset-3">
+        <h3>The weather in {{weather.display_location.full}}</h3>
+    <div class="row">
+    <div class="col-md-4 ">
+        <img src="{{weather.icon_url}}">
+    </div>
+    <div class="col-md-4" >
+        <h4>{{weather.weather}}</h4>
+    </div>
+    <div class="col-md-4" >
+        <h4>{{weather.temp_c}} &deg;C</h4>
+    </div>
+     </div>
+     </div>
 </div>
 
 
